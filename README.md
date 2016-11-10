@@ -1,4 +1,4 @@
-# sparkle-pack-aws-my-subnets
+# sparkle-pack-aws-my-s3-buckets
 SparklePack to auto-detect S3 buckets that have two tags:
 
 - Environment = `ENV['environment']`
@@ -47,3 +47,9 @@ by specifying it as a second parameter:
 ```ruby
 s3_bucket registry!(:my_s3_bucket, 'lambda', 'prod')
 ```
+
+### S3 regions
+
+Apparently, getting S3 bucket attributes like tags is hard.  If you know of
+a better way to handle buckets across AWS regions, please submit a pull
+request. :)
